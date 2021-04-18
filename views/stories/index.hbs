@@ -1,0 +1,38 @@
+<h1>Stories</h1>
+<div class="row">
+    {{#each stories}}
+    {{!-- <div>
+
+        <h2>
+            {{title}}
+        </h2>
+        <p>{{stripTags (truncate body 150)}}</p>
+
+    </div> --}}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    edit
+                    {{!-- {{{editIcon user ../user _id}}} --}}
+                </div>
+                <div class="card-content center-align">
+                    <h5>{{title}}</h5>
+                    <h5>title</h5>
+                    <p>{{stripTags (truncate body 150)}}</p>
+                    <p>tag</p>
+                    <br>
+                    <div class="chip">
+                        <img src="{{user.image}}" alt="">
+                        <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                        <a href="/stories/user/{{user._id}}">ram</a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/stories/{{_id}}"class="btn grey">Read More</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <p>No stories todisplay</p>
+    {{/each}}
+</div>
